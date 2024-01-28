@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jeux d'animations</title>
+	<link rel="javascriptSheet" type="text/javascript" href="mes_script.js">
+	<style type="text/css">
+		#animations{
+			width:600px;
+			height:600px;
+			border:20px dashed black;
+			margin:auto;
+			background:repeating-radial-gradient(grey, blue 10%, white 15%);
+			border-radius:100%;
+			animation: glisse 10s linear infinite;
+		}
+		@keyframes glisse{
+				100%{transform:rotate(360deg);}
+		}
+		#second{
+			width:300px;
+			height:300px;
+			border:20px double green;
+			border-radius:100%;
+			background-color: white;
+			margin:auto;
+			margin-top:22%;
+			animation:mysecond 5s linear infinite;
+		}
+		@keyframes mysecond{
+			100%{transform:rotatez(360deg);}
+		}
+		#ex1 {
+		    perspective: 800px;
+		}
+		#cube {
+		    font-size:5em;
+		    width: 2em;
+		    margin: 1.5em auto;
+		    transform-style: preserve-3d;
+		    transform: rotateX(-45deg) rotateY(30deg);
+		}
+		.side {
+		    position:absolute;
+		    width:2em;
+		    height:2em;
+		    background:linear-gradient(138deg, red, skyblue);
+		    border:3px dotted blue;
+		    border-radius:25px;
+		    line-height:2em;
+		}
+		.front {transform: translateZ(1em);}
+		.top {transform: rotateX(90deg) translateZ(1em);}
+		.right {transform: rotateY(90deg) translateZ(1em);}
+		.left {transform: rotateY(-90deg) translateZ(1em);}
+		.bottom {transform: rotateX(-90deg) translateZ(1em);}
+		.back {transform: rotateY(-180deg) translateZ(1em);}
+
+		/*the second party reserved for the footer */
+		#thegar {
+		    perspective:800px;
+		}
+		#cubical {
+		    font-size:5em;
+		    width:4em;
+		    margin: 1.5em auto;
+		    transform-style: preserve-3d;
+		    transform: rotateX(-45deg) rotateY(30deg);
+		}
+		.sideer {
+		    position:absolute;
+		    width:4em;
+		    height:4em;
+		    padding:20%;
+		    margin-top:30%;
+		    background:linear-gradient(138deg, black,blue);
+		    border:5px double red;
+		    line-height:2em;
+		    border-radius:100px;
+		    box-shadow:8px 8px 8px 10px yellow;
+		    animation:mycube 30s linear infinite;
+		}
+		@keyframes mycube{
+			80%{transform:rotate3d(0, 8, 10, 145deg);}
+		}
+		.front {transform: translateZ(1em);}
+		.top {transform: rotateX(90deg) translateZ(1em);}
+		.right {transform: rotateY(90deg) translateZ(1em);}
+		.left {transform: rotateY(-90deg) translateZ(1em);}
+		.bottom {transform: rotateX(-90deg) translateZ(1em);}
+		.back {transform: rotateY(-180deg) translateZ(1em);}
+		#center{
+			width:100%;
+			height:580px;
+			border:1px solid black;
+			border-radius:25px;
+			background:linear-gradient(50deg,grey 10%,pink 35%,lightblue 10%);
+		}
+		@keyframes hr{
+			0%{transform:rotatex(145deg);}
+		}
+		#roux{
+			width:800px;
+			height:800px;
+			border:20px dashed red;
+			border-radius:100%;
+			background:linear-gradient(90deg, red, blue);
+			margin:auto;
+			animation:roux 25s linear infinite;
+		}
+		#roux_1{
+			width:750px;
+			height:750px;
+			border:20px dotted blue;
+			border-radius:100%;
+			background:linear-gradient(170deg, yellow, skyblue);
+			padding:0.5% 0.5%;
+			animation:roux_1 20s linear infinite;
+		}
+		#roux_2{
+			width:700px;
+			height:700px;
+			border:20px dashed black;
+			border-radius:100%;
+			background:linear-gradient(250deg, pink,green);
+			padding:0.5% 0.5%;
+			animation:roux_2 15s linear infinite;
+		}
+		#roux_3{
+			width:650px;
+			height:650px;
+			border:20px double green;
+			border-radius:100%;
+			background:linear-gradient(340deg,blue,grey);
+			padding:0.5% 0.5%;
+			animation:roux_3 10s linear infinite;
+		}
+		#roux_4{
+			width:600px;
+			height:600px;
+			border:20px solid yellow;
+			border-radius:100%;
+			background:linear-gradient(90deg, red, yellow);
+			padding:0.5% 0.5%;
+			animation:roux_4 5s linear infinite;
+		}
+		@keyframes roux{
+			0%{transform:rotatey(0deg);}
+			100%{transform:rotatey(360deg);}
+		}
+		@keyframes roux_1{
+			0%{transform:rotatey(0deg);}
+			100%{transform:rotatey(360deg);}
+		}
+		@keyframes roux_2{
+			0%{transform:rotatex(0deg);}
+			100%{transform:rotatex(360deg);}
+		}
+		@keyframes roux_3{
+			0%{transform:rotatex(0deg);}
+			100%{transform:rotatex(-360deg);}
+		}
+		@keyframes roux_4{
+			0%{transform:rotate3d(45, 100, 25, 0deg);}
+			100%{transform:rotate3d(45, 100, 25, 360deg);}
+		}
+		/*exrecise class multiple class...*/
+		#all{
+			width:300px;
+			height:300px;
+			display:inline-blocks;
+			margin:auto;
+			background:skyblue;position:relative;
+			overflow:hidden;
+		}
+		#id{
+			display:none;
+			width:100px;
+			height:100px;
+			display:inline-blocks;
+			margin:auto;left:100px;
+			top:100px;
+			text-align: center;
+			background:grey;position:absolute;
+			transform:translateX(0px);
+		}
+		#all:hover #id{
+			display:block;
+			animation:id 2s linear forwards;
+		}
+		@keyframes id{
+			0%{transform:translateX(-300px);}
+			100%{}
+		}
+		#class1{
+			width:200px;height:200px;
+			margin:auto;
+			position:relative;
+			background:lightblue;
+		}
+		.class{
+			width:200px;height:200px;
+			position:absolute;
+			border:3px solid black;
+			background:maroon;
+			border-top-right-radius:250px;
+			border-bottom-left-radius:250px;
+		}
+		#classes{
+			width:300px;height:150px;
+			position:absolute;
+			transform:skewX(60deg);
+			border-bottom-left-radius:25%;
+			border-bottom-right-radius:25%;
+			border-top-right-radius:25%;
+			border-top-left-radius:25%;
+			border:3px solid black;
+			background:maroon;
+		}
+		#classe::before{
+			content:"";
+			border:40px solid;
+			border-color:transparent transparent black transparent;position:absolute;
+			top:35px;left:-60px;transform:rotate(-90deg);
+		}
+		#class2{
+		animation:class2 2s linear infinite;
+		}
+		#class3{
+			overflow:hidden;
+			background:lightgrey;
+			animation:class3 2s linear infinite;
+			animation-delay:0.5s;
+		}
+		#eyes{
+			width:150px;height:150px;
+			border-radius:150px;position:absolute;
+			background:white;
+			top:25px;left:25px;
+			border:1px solid grey;
+		}
+		#globe{
+			width:75px;height: 75px;border-radius:75px;
+			position:absolute;background:black;
+			top:37.5px;left:37.5px;
+		}
+		@keyframes class2{
+			0%{transform:rotate3d(1, 1, 0, 0deg);}
+			100%{transform:rotate3d(1, 1, 0, 360deg);}
+		}
+		@keyframes class3{
+			0%{transform:rotate3d(1, 1, 0, 0deg);}
+			100%{transform:rotate3d(1, 1, 0, 360deg);}
+		}
+		/*the calculateur*/
+		#face{
+			width:500px; height:1000px;border-bottom-left-radius:20%;border-bottom-right-radius:20%;border-top-right-radius:5%;border-top-left-radius:5%;
+			border:5px solid black;margin:auto;position:relative;
+			background:rgb(0, 0, 0, 0.9);
+		}
+		#bloc_1{
+			width:380px;height:100px;border:10px solid black;position:absolute;border-radius:5px;left:10%;top:12%;background:lightgreen;
+			border-color:black rgb(40, 40, 40, 1.0) black rgb(40, 40, 40, 1.0);
+		}
+		#bloc_2{
+			width:400px;height:300px;border:none;position:absolute;border-radius:5px;left:10%;top:25%;background:none;	
+		}
+		#bloc_2 p{width:50px;height:20px;border:1px solid grey;border-radius:100px;background:darkgrey;margin-left:38%;margin-top:2%;padding:5%;font-size:10px;text-align:center;}
+		#bloc_2 p a{text-decoration:none;color:grey;}
+		#section{}
+		#section_1{}
+		#section_2{}
+		#section_3{}
+		#section_4{}
+		#bloc_3{
+			width:407px;height:300px;border:none;position:absolute;border-radius:10px;left:9%;top:44.5%;background:none;position:relative;
+		}
+		#joinus{
+			font-size:40px;font-family:calibri;margin-top:1%;margin-left:15%;color:darkorange;
+		}
+		#expo{width:50px;height:50px;font-size:15px; border-radius:100%;border:1px solid darkorange;background:none;}
+		h3{font-size:100%;font-family:cursive;margin-top:-11%;margin-left:65%;color:darkorange;}
+		#face h2{font-size:23px;margin-left:22%;margin-top:3%;color:rgba(255, 0, 0, 0.7);word-spacing:10px;font-family:calibri;letter-spacing:3px;}
+		.touches{
+			width:50px; height:30px; background:grey; border:1px solid black;position:absolute; top:5%; left:2%;border-radius:10px;
+		}
+		#touche_0{top:85%; padding:1% 1%; text-align:center;} 
+		#touche_0 h2{color:white;}
+		#touche_1{top:65%; padding:1% 1%; text-align:center;}
+		#touche_1 h2{color:white;}
+		#touche_2{top:45%; padding:1% 1%; text-align:center;}
+		#touche_2 h2{color:white;}
+		#touche_3{top:25%; padding:1% 1%; text-align:center;}
+		#touche_3 h2{color:white;}
+		#touche_4{top:85%; padding:1% 1%; text-align:center;left:25%;}
+		#touche_4 h2{color:white;margin-left:5%;margin-top:-55%;font-size:50px;}
+		#touche_5{top:65%; padding:1% 1%; text-align:center;left:25%;}
+		#touche_5 h2{color:white;}
+		#touche_6{top:45%; padding:1% 1%; text-align:center;left:25%;}
+		#touche_6 h2{color:white;}
+		#touche_7{top:25%; padding:1% 1%; text-align:center;left:25%;}
+		#touche_7 h2{color:white;}
+		#touche_8{top:85%; padding:1% 1%; text-align:center;left:46%;}
+		#touche_8 h2{color:white;margin-left:1.5%;}
+		#touche_10{top:85%; padding:1% 1%; text-align:center;left:83%;}
+		#touche_10 h2{color:white;margin-left:1%;font-size:30px;margin-top:-10%;}
+		#touche_11{top:65%; padding:1% 1%; text-align:center;left:83%;}
+		#touche_11 h2{color:white;font-size:50px;margin-left:1%;margin-top:-35%;}
+		#touche_12{top:85%; padding:1% 1%; text-align:center;left:65%;}
+		#touche_12 h2{color:white;margin-left:1%;font-size:20px;}
+		#touche_13{top:25%; padding:1% 1%; text-align:center;left:83%;background:rgba(255, 0, 0, 0.3);}
+		#touche_13 h2{color:white;margin-left:2%;}
+		#touche_14{top:45%; padding:1% 1%; text-align:center;left:83%;}
+		#touche_14 h2{color:white;font-size:25px;margin-left:2%;margin-top:-5%;}
+		#touche_15{top:65%; padding:1% 1%; text-align:center;left:46%;}
+		#touche_15 h2{color:white;}
+		#touche_16{top:45%; padding:1% 1%; text-align:center;left:46%;}
+		#touche_16 h2{color:white;}
+		#touche_17{top:25%; padding:1% 1%; text-align:center;left:46%;}
+		#touche_17 h2{color:white;}
+		#touche_18{top:65%; padding:1% 1%; text-align:center;left:65%;}
+		#touche_18 h2{color:white;font-size:50px;margin-left:8%;margin-top:-33%;}
+		#touche_19{top:25%; padding:1% 1%; text-align:center;left:65%;background:rgba(255, 0, 0, 0.3);}
+		#touche_19 h2{color:white;margin-left:2%;}
+		#touche_20{top:45%; padding:1% 1%; text-align:center;left:65%;}
+		#touche_20 h2{color:white;font-size:50px;margin-left:5%;margin-top:-15%;}
+		/*partie pour l'animation des fils*/
+		#animation_file{
+			width:100%;border:2px solid red;border-radius:25px;
+			animation:file 2s linear infinite;
+		}
+		@keyframes file{
+			0%{transform:translate3d(10px, 10px, 0px);}
+		}
+	</style>
+</head>
+<body>
+	<div id="animations">
+		<div id="second">
+			<img src="logo Evrard.PNG" style="width:300px; height:300px; border-radius:100%;">
+			<br><br><br><br><br><br><br>
+			<div id="ex1">
+			  <div id="cube">
+			    <div class="side front"></div>
+			    <div class="side back"></div>
+			    <div class="side right"></div>
+			    <div class="side left"></div>
+			    <div class="side top"></div>
+			    <div class="side bottom"></div>
+			  </div>
+			</div>
+		</div>
+	</div>
+</body>
+<br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<hr style="width:100%; height:50px; border:2px solid red; border-radius:100%;background:repeating-radial-gradient(red, yellow 10% ,red 15%); animation:hr 5s infinite;">
+<br><br><br>
+<footer>
+	<div id="center">
+		<div id="thegar">
+		  <div id="cubical">
+		    <div class="sideer front"></div>
+		    <div class="sideer back"></div>
+		    <div class="sideer right"></div>
+		    <div class="sideer left"></div>
+		    <div class="sideer top"></div>
+		    <div class="sideer bottom"></div>
+		  </div>
+		</div>
+	</div>
+	<br><br><br><br><br><br>
+	<div id="roux">
+		<div id="roux_1">
+			<div id="roux_2">
+				<div id="roux_3">
+					<div id="roux_4">
+					</div>	
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr style="border:3px solid black; height:50px; width:100%;border-radius:30px;">
+	<br><br><br><br><br><br><br>
+	<div id="all">
+		<div id="id"><a href="#"><h2>i have a dream</h2></a></div>
+	</div>
+	<br><br><br><br><br><br><br><br><br><br>
+	<div id="classes"></div>
+	<br><br><br><br><br><br><br><br><br><br><br>
+	<div id="class1">
+		<div id="class2" class="class"></div>
+		<div id="class3" class="class">
+			<div id="eyes">
+				<div id="globe"></div>
+			</div>
+		</div>
+	</div>
+	<br><br><br><br><br><br><br><br><br>
+	<div id="animation_file"></div>
+	<br><br><br><br><br>
+	<hr style="border:3px solid black; height:50px; width:100%;border-radius:30px;">
+	<br><br><br><br>
+	<div id="face">
+		<h1 id="joinus">JOINUS<sup id="expo">R</sup></h1>
+		<h3>JS-82MS-A</h3>
+		<h2>SCIENTIFIC CALCULATOR</h2>
+		<div id="bloc_1"></div>
+		<div id="bloc_2">
+			<p><a href="#">REPLAY</a></p>
+		</div>
+		<div id="section">
+			<div id="section_1"></div>
+			<div id="section_2"></div>
+			<div id="section_3"></div>
+			<div id="section_4"></div>
+		</div>
+		<div id="bloc_3">
+			<div class="touches" id="touche_0"onclick="myfunction()"><h2>0</h2></div>
+			<div class="touches" id="touche_1"><h2>1</h2></div>
+			<div class="touches" id="touche_2"><h2>4</h2></div>
+			<div class="touches" id="touche_3"><h2>7</h2></div>
+			<div class="touches" id="touche_4"><h2>.</h2></div>
+			<div class="touches" id="touche_5"><h2>2</h2></div>
+			<div class="touches" id="touche_6"><h2>5</h2></div>
+			<div class="touches" id="touche_7"><h2>8</h2></div>
+			<div class="touches" id="touche_8"><h2>EXP</h2></div>
+			<div class="touches" id="touche_10"><h2>=</h2></div>
+			<div class="touches" id="touche_11"><h2>-</h2></div>
+			<div class="touches" id="touche_12"><h2>Ans</h2></div>
+			<div class="touches" id="touche_13"><h2>AC</h2></div>
+			<div class="touches" id="touche_14"><h2>./.</h2></div>
+			<div class="touches" id="touche_15"><h2>3</h2></div>
+			<div class="touches" id="touche_16"><h2>6</h2></div>
+			<div class="touches" id="touche_17"><h2>9</h2></div>
+			<div class="touches" id="touche_18"><h2>+</h2></div>
+			<div class="touches" id="touche_19"><h2>DEL</h2></div>
+			<div class="touches" id="touche_20"><h2>*</h2></div>
+		</div>
+	</div>
+</footer>
+</html>

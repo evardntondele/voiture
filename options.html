@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Options</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<style>
+	.container {
+	  position: relative;
+	  width: 50%;
+	}
+
+	.image {
+	  display: block;
+	  width: 100%;
+	  height: auto;
+	}
+
+	.overlay {
+	  position: absolute;
+	  bottom: 100%;
+	  left: 0;
+	  right: 0;
+	  background-color: #008CBA;
+	  overflow: hidden;
+	  width: 100%;
+	  height:0;
+	  transition: .5s ease;
+	}
+
+	.container:hover .overlay {
+	  bottom: 0;
+	  height: 100%;
+	}
+
+	.text {
+	  white-space: nowrap; 
+	  color: white;
+	  font-size: 20px;
+	  position: absolute;
+	  overflow: hidden;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+	  -ms-transform: translate(-50%, -50%);
+	}
+	#nom{
+		font-size:25px;
+		color: yellow;
+		letter-spacing:20px;
+		background:none;
+		text-decoration:underline;
+	}
+	.container {
+	    position: relative;
+	    width: 50%;
+	}
+
+	.image {
+	  opacity: 1;
+	  display: block;
+	  width: 100%;
+	  height: auto;
+	  transition: .5s ease;
+	  backface-visibility: hidden;
+	}
+
+	.middle {
+	  transition: .5s ease;
+	  opacity: 0;
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+	  -ms-transform: translate(-50%, -50%)
+	}
+
+	.container:hover .image {
+	  opacity: 0.3;
+	}
+
+	.container:hover .middle {
+	  opacity: 1;
+	}
+
+	.text {
+	  background-color: #4CAF50;
+	  color: white;
+	  font-size: 16px;
+	  padding: 16px 32px;
+	}
+	/*voiture*/
+	#trapeze{width:250px;height:0;border-left:130px solid transparent;
+	    border-right:130px solid transparent;border-bottom:200px solid red; margin:auto;position: relative;
+	    animation:mytrapeze 22s linear infinite;
+	}
+	@keyframes mytrapeze {
+	    0%{transform: translateX(-1000px);}
+	    100%{transform: translateX(1000px);}
+	}
+	.trapeze{
+	    position:absolute;
+	    width:60px;height:0px;border-left:20px solid transparent;
+	    border-right:20px solid transparent;top:15px;
+	}
+	#petit{
+	    left:-10px; border-bottom:50px solid white;
+	}
+	#petite{
+	    left:140px;border-bottom:50px solid white;border-left:10px solid white;width: 90px;
+	}
+	.deux{height:100px;border:0px solid red;position: absolute;top:84px;border-top-right-radius:10px;border-bottom-right-radius:10pxs;}
+	#rec{width:80px;right:310px;background:linear-gradient(220deg,red, darkred,red);}
+	#recs{width:130px;left:308px;background:linear-gradient(220deg,red, darkred,red);}
+	#trait{border-left:2px solid white;position:absolute;height: 120px;top:8px;left:130px;}
+	#traits{border-bottom:2px solid white;position:absolute;width:260px;top:135px;left:20px;}
+	.pneu{width:100px;height:100px;border:1px solid wheat;background:black;position:absolute;border-radius:100px;top:140px;
+	    animation:mypneu 12s linear infinite;
+	}
+	@keyframes mypneu{
+	    0%{transform: rotate(0deg);}
+	    100%{transform:rotate(360deg);}
+	}
+	#roux{left:260px;}
+	#pt{width: 60px;height:60px;border:1px solid black;border-radius:100px;top:160px;position: absolute;
+	    background:linear-gradient(red, yellow, blue);
+	    z-index:1;
+	    left:-60px; animation:pt 12s linear infinite;
+	}
+	@keyframes pt {
+	    0%{transform: rotate(0deg);}
+	    100%{transform:rotate(360deg);}
+	}
+	#rouxs{left:-80px;}
+	#pts{
+	    width: 60px;height:60px;border:1px solid black;border-radius:100px;top:160px;position: absolute;background:linear-gradient(red, yellow, blue);
+	    z-index:1;
+	    left:280px; animation:pts 12s linear infinite;
+	}
+	@keyframes pts{
+	    0%{transform: rotate(0deg);}
+	    100%{transform:rotate(360deg);}
+	}
+	#centre{
+		position: relative;
+	}
+	#demarre{
+		width:250px; height:50px;border:2px solid black; color:white;background:grey;border-radius:10px; margin-left:10%; margin-top:-10%;position:absolute;color:blue;
+	}
+	#demarre:hover{
+		box-shadow:2px 2px 2px black; padding:3px;background:blue;color:white; 
+	}
+	#stop{
+		width:250px; height:50px;border:2px solid black; color:red;background:grey;border-radius:10px;margin-left:40%;margin-top:-14%;position:absolute;
+	}
+	#stop:hover{
+		box-shadow:2px 2px 2px black; padding:3px;background:red; color:white;
+	}
+	</style>
+</head>
+<body>
+	<h2>salut la famille</h2>
+	<div class="container">
+	  <img src="eva.jpg" alt="Avatar" class="image">
+	  <div class="overlay">
+	    <div class="text"><a href="maison_a_louer.html" id="nom">Bona brigita sovanna</a></div>
+	  </div>
+	</div>
+	</style>
+	</head>
+	<body>
+
+	<h2>Fade in a Box</h2>
+
+	<div class="container">
+	  <img src="img_avatar.png" alt="Avatar" class="image" style="width:100%">
+	  <div class="middle">
+	    <div class="text">John Doe</div>
+	  </div>
+	</div>
+	<hr>
+	<br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br>
+    <!---code javascript--->
+    <script type="text/javascript">
+    	const demarrer = document.getElementById('demarre');
+    	demarre.onclick = () => document.body.div.style.animation = " 2s linear infinite ";
+
+    </script>
+	<br><br><br><br><br><br><br><br><br><br><br><br>
+	<br>
+	   <div>
+	        <div id="trapeze">
+	            <p id="petit" class="trapeze"></p>
+	            <p id="petite" class="trapeze"></p>
+	            <p id="rec" class="deux"></p>
+	            <p id="recs" class="deux"></p>
+	            <p id="trait"></p>
+	            <p id="traits"></p>
+	            <p id="roux" class="pneu">
+	                <p id="pt"></p>
+	            </p>
+	            <p id="rouxs" class="pneu">
+	                <p id="pts"></p>
+	            </p>
+        	</div>
+	   </div>
+	 <br><br><br><br><br><br><br><br><br><br>
+	 <br><br><br><br><br><br><br>
+<div id="centre">
+	<button id="demarre">demarrer</button>
+	<br><br><br>
+	<button id="stop">arreter</button>
+</div>
+</body>
+</html>
